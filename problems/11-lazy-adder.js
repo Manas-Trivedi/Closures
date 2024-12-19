@@ -22,8 +22,8 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   fat-arrow function
 ***********************************************************************/
 
-function lazyAdder(firstNum) {
-  // Your code here
+function lazyAdder(num1) {
+  return num2 => (num3 => num1 + num2 + num3);
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

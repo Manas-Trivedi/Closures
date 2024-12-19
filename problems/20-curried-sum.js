@@ -43,7 +43,19 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 ***********************************************************************/
 
 function curriedSum(numArgs) {
-  // Your code here
+  let args = [];
+  return function temp(num){
+    if(num === undefined) return;
+    args.push(num);
+    let sum = 0;
+    if(args.length == numArgs){
+      args.forEach((val) => {
+      sum += val;
+      });
+      return sum;
+    }
+    return temp;
+  };
 }
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

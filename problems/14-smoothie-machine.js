@@ -4,7 +4,7 @@ and returns a function.
 
 The returned function will also accept any number of parameters and will
 return a string including all of the parameters of smoothieMachine as well
-as the returned function's parameters. Look at the examples for a guide of 
+as the returned function's parameters. Look at the examples for a guide of
 how your return should be formatted!
 
 See below for examples:
@@ -25,7 +25,17 @@ console.log(smoothie2("pineapple"));
 
 const smoothieMachine = (...ingredients) => {
   // Your code here
-};
+  let str = `I'm having a smoothie with `;
+  for(item of ingredients){
+    str += `${item} and`;
+  }
+  return (...moreStuff) => {
+    for(item of moreStuff){
+      str += `${item} and `;
+    }
+    return str.slice(0, str.length - 5);
+  };
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
